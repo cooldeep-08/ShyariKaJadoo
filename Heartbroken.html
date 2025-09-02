@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Viewport tag for mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'hi', includedLanguages: 'hi,en,gu,ta,te,ml,mr,bn,pa,ur' },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <title>HeartBroken Shayari</title>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </head>
+    
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Serif Devanagari', Arial, sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        #google_translate_element {
+            margin-top: 5px;
+        }
+
+
+        h1.page-title {
+            text-align: center;
+            /* Center me rakha */
+            font-size: 28px;
+            /* Thoda chhota */
+            font-weight: 900;
+            color: #fff;
+            background: rgba(255, 81, 47, 0.15);
+            /* Header gradient ke orange shade ka transparent */
+            padding: 10px 20px;
+            border-radius: 15px;
+            display: block;
+            margin: 30px auto;
+            /* Center me margin auto */
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 8px #ff512f, 0 0 16px #dd2476, 0 0 24px #ff512f, 0 0 32px #dd2476;
+            animation: glowPulse 2.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glowPulse {
+            0% {
+                text-shadow: 0 0 5px #ff512f, 0 0 10px #dd2476, 0 0 15px #ff512f, 0 0 20px #dd2476;
+                transform: scale(1);
+            }
+
+            50% {
+                text-shadow: 0 0 10px #ff512f, 0 0 20px #dd2476, 0 0 30px #ff512f, 0 0 40px #dd2476;
+                transform: scale(1.05);
+            }
+
+            100% {
+                text-shadow: 0 0 5px #ff512f, 0 0 10px #dd2476, 0 0 15px #ff512f, 0 0 20px #dd2476;
+                transform: scale(1);
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 480px) {
+            h1.page-title {
+                font-size: 22px;
+                padding: 8px 15px;
+                letter-spacing: 1px;
+            }
+        }
+
+        /* Cards */
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 15px;
+            margin: 15px auto;
+            width: 90%;
+            max-width: 500px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .photo-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .photo-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .photo-buttons button {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .photo-buttons button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .shayari {
+            font-size: 18px;
+            color: #333;
+            margin-top: 12px;
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 15px 20px;
+            background: #111;
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #333;
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: #555;
+            transform: scale(1.2);
+            color: #ff4d4d;
+        }
+
+        .footer-copy {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer-info {
+            font-size: 14px;
+            text-align: right;
+        }
+
+        /* Back-to-top */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #008080;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 18px;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        .back-to-top:hover {
+            background-color: #006d63;
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-info {
+                text-align: center;
+            }
+
+            .card {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1.page-title {
+                font-size: 22px;
+            }
+
+            .shayari {
+                font-size: 16px;
+            }
+
+            .photo-buttons button {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+
+            .logo {
+                width: 40px;
+                height: 40px;
+            }
+
+            header h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-title">
+            <img src="rabbit.png" class="logo" alt="My Rabbitt Logo" loading="lazy">
+            <h1>शायरी का जादू</h1>
+        </div>
+        <div id="google_translate_element"></div>
+    </header>
+    <h1 class="page-title">HeartBroken Shayari</h1>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb32.jpg" alt="Heartbroken Image 1" id="img32" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img32')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> अजीब जुल्म करती हैं तेरी यादें मुझ पर सोचू तो बिखर जाऊ<br>
+                ना सोचू तो किधर जाऊं| 💯❤</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb31.jpg" alt="Heartbroken Image 1" id="img31" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img31')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> शब्दों से ही दिलों पर राज किया जाता है<br>
+                चेहरे का क्या है किसी भी हादसे में बदल सकता है..❤💯</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb30.jpg" alt="Heartbroken Image 1" id="img30" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img30')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> कोई तेरा हो गया एक दीदार से तू याद तो कर,किसी<br>
+                ने तुझे चाहा है 4 साल से.❤💯💔</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb29.jpg" alt="Heartbroken Image 1" id="img29" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img29')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> एक कहावत है<br>
+                मेंढक को चाहे सोने की ईट पर ही क्यों,ना<br>
+                बैठा दो वह छलांग नाले में ही लगाएगा..💯💔😭</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb28.jpg" alt="Heartbroken Image 1" id="img28" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img28')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>काश में फूल होता है तुम्हारे घर में<br>
+                मौजूद होता है तुम पानी देते या,ना<br>
+                देते मैं तुम्हें खुशबू जरूर देता..❤💯</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb27.jpg" alt="Heartbroken Image 1" id="img27" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img27')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>नींद की गोलियां भी हर रात कहने लगी हम<br>
+                इंसानों पर असर करते हैं आशिकों पर नहीं.❤💔💯</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb26.jpg" alt="Heartbroken Image 1" id="img26" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img26')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>चारों तरफ तन्हाई का साया है<br>
+                जिंदगी में प्यार किसने पाया है<br>
+                हम यादों में घूमते हैं उनकी और जमाना<br>
+                कहता है आज फिर पीकर आया है❤🙈</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb25.jpg" alt="Heartbroken Image 1" id="img25" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img25')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> काफी अच्छा समय बीता है साथ,में<br>
+                काफी अच्छी याद हो तुम बहुत कुछ<br>
+                कहना था तुमसे पर जाओ अब आजाद हो तुम..❤🌼💔</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb24.jpg" alt="Heartbroken Image 1" id="img24" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img24')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> जो लोग कहते हैं बेहतर मिल जाएगा,तो<br>
+                उन्हें बता देना कभी दूसरी बरसात से मिट्टी नहीं महकती..❤💯🙈🌼</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb23.jpg" alt="Heartbroken Image 1" id="img23" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img23')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> जिंदगी में ऐसा हमसफर चाहिए, जिससे<br>
+                हम दूर भी रहे तो वह हमारा विश्वास ना तोड़े..❤🌼🙈</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb22.jpg" alt="Heartbroken Image 1" id="img22" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img22')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>क्या गुरुर करना अपनी अच्छाई पर किसी न किसी कहानी में हम भी गलत है..❤💯</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb21.jpg" alt="Heartbroken Image 1" id="img21" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img21')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> बारिश और मोहब्बत दोनों ही यादगार होते हैं<br>
+                बारिश में जिसम भीगता है और मोहब्बत में आंख..❤💯</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb20.jpg" alt="Heartbroken Image 1" id="img20" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img20')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>हम सारी रात नहीं सोए सुबह उससे मिलने की खुशी में,<br>
+                वह मेरी आंखों में देखकर कहने लगी मुझे नफरत है शराबियों से 💯😭</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb19.jpg" alt="Heartbroken Image 1" id="img19" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img19')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> हर खूबी हर किसी के अंदर नहीं होती<br>
+                अगर आप हसीन है तो मैं वफादार हूं..❤💯</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb18.jpg" alt="Heartbroken Image 1" id="img18" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img18')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <p> कोई किसी के लिए नहीं मारता यह सब दिखावा है,<br>
+                दफना हुए बंदे को भूल जाते हैं कबर कौन सी थ💔❤💯</p>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb17.jpg" alt="Heartbroken Image 1" id="img17" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img17')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>चाहने वालों को उम्मीद होती है लौट ही आएगा,<br>
+                जाने वालों को वहम होता है भूल ही जाएगा..💯💔❤</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb16.jpg" alt="Heartbroken Image 1" id="img16" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img16')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> किस्मत में होगा तो फिर,मिलेंगे अनजान बनकर. !❤️🌸</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb15.jpg" alt="Heartbroken Image 1" id="img15" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img15')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> सिंदूर, मंगलसूत्र विवाह का प्रतीक हो सकता है लेकिन प्रेम का नहीं!</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb14.jpg" alt="Heartbroken Image 1" id="img14" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img14')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> ना पूछ मुझे मेरे जागने की वजह,कोई<br>
+                तेरा ही हमशक्ल है जो मुझे सोने नहीं देता..❤💔💯😔</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb13.jpg" alt="Heartbroken Image 1" id="img13" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img13')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> आदमी को प्यार जताना नहीं आता है,<br>
+                लेकिन सच यही है कि एक रिश्ते में औरत से ज्यादा प्यार आदमी करता है..! ❤💯🙈</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb12.jpg" alt="Heartbroken Image 1" id="img12" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img12')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> कौन कहता है हम तबाह नहीं है,मेरी<br>
+                बर्बादी का बस कोई गवाह नहीं है,<br>
+                सब देखते हैं मुझे मुस्कुराते हुए,क्योंकि<br>
+                रोने के लिए कोई जगह नहीं है.💔😭</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb11.jpg" alt="Heartbroken Image 1" id="img11" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img11')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> प्यास तो पानी से ही बुझेगी,मैं<br>
+                शराब का क्या करूंगा,और<br>
+                तेरी कमी तुझसे ही पूरी होगी,मैं<br>
+                किसी और का क्या करूंगा..! ❤🌺🌼</blockquote>
+        </div>
+    </div>
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb10.jpg" alt="Heartbroken Image 1" id="img10" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img10')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> मोहब्बत में ऐसा ही होता है <br>
+                एक रोता है तो दूसरा आराम से सोता है| 😥💔😭</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb9.jpg" alt="Heartbroken Image 1" id="img9" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img9')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> सुना था,<br>
+                शिद्दत से चाहो तो<br>
+                कायनात मिलाने में लग जाती है<br>
+                झूठ है,<br>
+                मुझसे तो हर वह चीज दूर चली गई जिसे मैंने<br>
+                शिद्दत से चाहा.!! 💔😔😥</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb8.jpg" alt="Heartbroken Image 1" id="img8" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img8')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> मुझे छोड़ने की वजह तो बताते, <br>
+                मुझसे नाराज थे या फिर मेरे जैसे हजार थे..😥❤🌺 </blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb7.jpg" alt="Heartbroken Image 1"id="img7" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img7')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote> धूम्रपान तो यूं ही बदनाम है,<br>
+                हानिकारक तो मोहब्बत है.!! 💔😔😭</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb6.jpg" alt="Heartbroken Image 1" id="img6" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img6')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>दिमाग पर जोर लगाकर गिनते हो<br>
+                गलतियां मेरी,<br>
+                कभी दिल पर हाथ रखकर पूछा<br>
+                कि कसूर किसका था..! ❤️🔪</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb5.jpg" alt="Heartbroken Image 1" id="img5" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img5')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>अगर इंतज़ार करना इश्क़ हे, तो<br>
+                फिर आखरी सांस भी तेरे हवाले || ❤️</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb4.jpg" alt="Heartbroken Image 1" id="img4" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img4')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>जरूरी थोड़ी हे की जिससे, <br>
+                हम प्यार करे वो भी हमसे प्यार करे..!!🌹❤️</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb3.jpg" alt="Heartbroken Image 1" id="img3" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img3')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>इतना मत तरसा के मुझे अपने,<br>
+                फैसले पर अफसोस हो,<br>
+                कल तू बात करना चाहे और हम,<br>
+                खामोश हो.!! 🫀🕊️</blockquote>
+        </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb2.jpg" alt="Heartbroken Image 1" id="img2" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img2')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>निकल आते है आंसू जब मुलाकात नहीं होती<br>
+                टूट जाता हे दिल जब बात नहीं होती,<br>
+                तेरे जान की कसम ऐ मेरी जान<br>
+                तू याद ना आये ऐसी कोई रात नहीं होती.!! ❤️😔😭 </blockquote>
+        </div>
+    </div>
+
+
+    <!-- Cards -->
+    <div class="card">
+        <div class="photo-container">
+            <img src="hb1.jpg" alt="Heartbroken Image 1" id="img1" loading="lazy">
+            <div class="photo-buttons">
+                <button onclick="downloadImage('img1')">Download</button>
+            </div>
+        </div>
+        <div class="shayari">
+            <blockquote>क्यू ना बेफिकर होक अब सोया जाये, अरे<br>
+                बच्चा ही क्या हे जिसे,अब खोया जाये.!! 😭😭</blockquote>
+        </div>
+    </div>
+    <footer>
+        <!-- Left side social icons -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/shayariikajadoo"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- Center Copyright -->
+        <p class="footer-copy">Copyright © 2025 Shayari Ka Jadoo - All Rights Reserved.</p>
+
+        <!-- Right side contact/location -->
+        <div class="footer-info">
+            📍Address: Surat - Gujarat, India
+        </div>
+    </footer>
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top">↑</button>
+
+    <script>
+        // Download Function
+        function downloadImage(id) {
+            const img = document.getElementById(id);
+            const link = document.createElement('a');
+            link.href = img.src;
+            link.download = img.src.split('/').pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Back-to-top button
+        const backToTop = document.getElementById('back-to-top');
+        window.onscroll = () => {
+            if (window.scrollY > 300) backToTop.style.display = 'block';
+            else backToTop.style.display = 'none';
+        };
+        backToTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    </script>
+</body>
+
+</html>

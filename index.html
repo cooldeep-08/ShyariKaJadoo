@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'hi', includedLanguages: 'hi,en,gu,ta,te,ml,mr,bn,pa,ur' },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShayariKaJadoo</title>
+</head>
+<style>
+  body {
+    font-family: "Noto Serif Devanagari", serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    color: #222;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  header .btn {
+    text-decoration: none;
+    /* underline remove */
+    background: #333;
+    /* default dark bg */
+    color: #fff;
+    /* white text */
+    padding: 10px 18px;
+    border-radius: 20px;
+    /* rounded buttons */
+    transition: 0.3s;
+    font-size: 14px;
+  }
+
+  header .btn:hover {
+    background: #008080;
+    /* hover pe teal */
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+  header h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .logo-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    width: 45px;
+    /* logo thoda bada aur clear */
+    height: 45px;
+    border-radius: 50%;
+    /* circle look (optional) */
+    margin-right: 5px;
+    /* text ke aage gap */
+  }
+
+
+  /* Container for buttons */
+  .btn-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    /* space between buttons */
+  }
+
+  /* Button Styling */
+  .btn {
+    background: linear-gradient(90deg, #cd5c5c, #ff7f7f);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn:hover {
+    background: #008080;
+    color: #fff;
+    transform: scale(1.05);
+  }
+
+  /* Navigation Bar */
+  nav {
+    background: linear-gradient(90deg, #cd5c5c, #008080);
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 16px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  nav a {
+    margin: 5px 10px;
+  }
+
+  /* Separator (|) only between links */
+  nav a:not(:last-child)::after {
+    content: "|";
+    margin: 0 3px;
+    color: white;
+  }
+
+  .btn-container {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+
+  }
+
+  .dropdown-btn:hover {
+    text-decoration: underline;
+    background-color: cadetblue;
+  }
+
+  .dropdown-content {
+    display: none;
+    /* by default hidden */
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin-top: 5px;
+    z-index: 1;
+    text-align: left;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: aquamarine;
+  }
+
+  /* Show on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  h1.page-title {
+    text-align: center;
+    /* Center me rakha */
+    font-size: 28px;
+    /* Thoda chhota */
+    font-weight: 900;
+    color: #fff;
+    background: rgba(255, 81, 47, 0.15);
+    /* Header gradient ke orange shade ka transparent */
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: block;
+    margin: 30px auto;
+    /* Center me margin auto */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 8px #ff512f, 0 0 16px #dd2476, 0 0 24px #ff512f, 0 0 32px #dd2476;
+    animation: glowPulse 2.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes glowPulse {
+    0% {
+      text-shadow: 0 0 5px #ff512f, 0 0 10px #dd2476, 0 0 15px #ff512f, 0 0 20px #dd2476;
+      transform: scale(1);
+    }
+
+    50% {
+      text-shadow: 0 0 10px #ff512f, 0 0 20px #dd2476, 0 0 30px #ff512f, 0 0 40px #dd2476;
+      transform: scale(1.05);
+    }
+
+    100% {
+      text-shadow: 0 0 5px #ff512f, 0 0 10px #dd2476, 0 0 15px #ff512f, 0 0 20px #dd2476;
+      transform: scale(1);
+    }
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 480px) {
+    h1.page-title {
+      font-size: 22px;
+      padding: 8px 15px;
+      letter-spacing: 1px;
+    }
+  }
+
+  /* Cards */
+  .card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 15px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 500px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .photo-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .photo-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .photo-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .photo-buttons button {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+
+  .photo-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .shayari {
+    font-size: 18px;
+    color: #333;
+    margin-top: 12px;
+  }
+
+  /* Main Content */
+  .content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .content h2 {
+    color: #c21f39;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    background: #111;
+    color: white;
+  }
+
+  footer .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+
+  footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+
+  footer .social-icons a:hover {
+    background: #555;
+    transform: scale(1.2);
+    color: #ff4d4d;
+  }
+
+  footer .footer-copy {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  footer .footer-info {
+    font-size: 14px;
+    text-align: right;
+  }
+
+  /* ✅ Mobile responsive */
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    footer .social-icons {
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    footer .footer-copy {
+      margin: 10px 0;
+    }
+
+    footer .footer-info {
+      margin-top: 5px;
+      text-align: center;
+    }
+  }
+
+  /* back-to-top.css */
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #008080;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Added shadow */
+  }
+
+  .back-to-top:hover {
+    background-color: #006d63;
+    transform: scale(1.1);
+    /* Slight zoom on hover */
+  }
+
+  /* Responsive  */
+  @media (max-width: 480px) {
+    .back-to-top {
+      padding: 12px;
+      font-size: 16px;
+    }
+  }
+</style>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-title">
+      <img src="rabbit.png" class="logo" alt="My Rabbitt Logo">
+      <h1>शायरी का जादू</h1>
+    </div>
+    <div class="btn-container">
+      <div id="google_translate_element">Translate</div> <!-- यहाँ पर Translate आएगा -->
+      <a class="btn" href="Contactus.html">Contact Us</a>
+    </div>
+  </header>
+
+
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="Love.html">Love</a>
+    <a href="Romantic.html">Romantic</a>
+    <a href="Sad.html">Sad</a>
+    <a href="Motivational.html">Motivational</a>
+    <a href="Heartbroken.html">HeartBroken</a>
+    <a href="Dosti.html">Dosti</a>
+    <a href="Attitude.html">Attitude</a>
+    <a href="Suvichar.html">Suvichar</a>
+    <a href="Funny.html">Funny</a>
+    <a href="Goodmorning.html">Good Morning</a>
+    <a href="Goodnight.html">Good Night</a>
+    <a href="Birthday.html">Birthday</a>
+    <div class="dropdown">
+      <button class="dropdown-btn">Others</button>
+      <div class="dropdown-content">
+        <a href="index.html">Relation</a>
+        <a href="index.html">Angry</a>
+        <a href="Reality.html">Reality</a>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- Main Content -->
+
+  <h1 class="page-title">फेमस शायरी 2025</h1>
+
+  <!-- Cards -->
+  <div class="card">
+    <div class="photo-container">
+      <a href="Love.html">
+        <img src="l2.jpg" alt="Love Shayari 2025 Image" id="img1" loading="lazy">
+      </a>
+      <div class="photo-buttons">
+        <button onclick="downloadImage('img1')">Download</button>
+      </div>
+    </div>
+    <div class="shayari">
+      <blockquote>
+        साथ आप दोगे तो मुस्कुरायेंगे जरूर,<br>
+        प्यार दिल से करोगे तो निभाएंगे जरूर,<br>
+        राह में चाहे कितने काटे क्यू ना हो,<br>
+        आवाज तुम दिल से दोगे तो आएंगे जरूर || ❤️</blockquote>
+    </div>
+  </div>
+  <!-- Cards -->
+  <div class="card">
+    <div class="photo-container">
+      <a href="Love.html">
+        <img src="l12.jpg" alt="Love Shayari 2025 Image" id="img2" loading="lazy">
+      </a>
+      <div class="photo-buttons">
+        <button onclick="downloadImage('img2')">Download</button>
+      </div>
+    </div>
+    <div class="shayari">
+      <blockquote>
+        यूं तो आदत नहीं मेरी पलट कर देखने,की<br>
+        तुम्हें देखा तो लगा बस एक बार और देखलू..! ❤💯🌺🌼</blockquote>
+    </div>
+  </div>
+  <!-- Cards -->
+  <div class="card">
+    <div class="photo-container">
+      <a href="Romantic.html">
+        <img src="r13.jpg" alt="Romantic Shayari 2025 Image" id="img3" loading="lazy">
+      </a>
+      <div class="photo-buttons">
+        <button onclick="downloadImage('img3')">Download</button>
+      </div>
+    </div>
+    <div class="shayari">
+      <blockquote> जब से उनकी नजर में इस नजर को जिस नजर से देखा,तब<br>
+        से इस नजर ने किसी और नजर को उस नजर से एक नजर तक ना देखा..! ❤🌺🌼</blockquote>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="card">
+    <div class="photo-container">
+      <a href="Romantic.html">
+        <img src="r1.jpg" alt="Romantic Shayari 2025 Image" id="img4" loading="lazy">
+      </a>
+      <div class="photo-buttons">
+        <button onclick="downloadImage('img4')">Download</button>
+      </div>
+    </div>
+    <div class="shayari">
+      <blockquote>
+        सिसा क्या बताएगा खूबसूरती तुम्हारी, <br>
+        वक्त हो तो देख लेना आंखें हमारी.. 👀🌺❤</blockquote>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="card">
+    <div class="photo-container">
+      <a href="Sad.html">
+        <img src="s36.jpg" alt="Sad Shayari 2025 - अब मुझे प्यार की हर बात से डर लगता है" id="img5" loading="lazy">
+      </a>
+      <div class="photo-buttons">
+        <button onclick="downloadImage('img5')">Download</button>
+      </div>
+    </div>
+    <div class="shayari">
+      <blockquote>बात दिन की नहीं अब रात से डर लगता है<br>
+        घर है कच्चा मेरा बरसात से डर लगता है.. <br>
+        प्यार को छोड़कर तुम कोई और बात कर,लो<br>
+        अब मुझे प्यार की हर बात से डर लगता है..💯❤</blockquote>
+    </div>
+  </div>
+
+
+  <!-- Cards -->
+  <div class="card">
+    <div class="photo-container">
+      <a href="Sad.html">
+        <img src="s15.jpg" alt="Sad Shayari 2025 Image" id="img6" loading="lazy">
+      </a>
+      <div class="photo-buttons">
+        <button onclick="downloadImage('img6')">Download</button>
+      </div>
+    </div>
+    <div class="shayari">
+      <blockquote>
+        रुठे रुठे से लगते हो खैर क्या बात हो गई, <br>
+        शिकायत हमसे है या किसी और से मुलाकात हो गई.. <br>
+        💔🌺😔</blockquote>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="card">
+    <div class="photo-container">
+      <a href="Heartbroken.html">
+        <img src="hb15.jpg" alt="HeartBroken Shayari 2025 Image" id="img7" loading="lazy">
+      </a>
+      <div class="photo-buttons">
+        <button onclick="downloadImage('img7')">Download</button>
+      </div>
+    </div>
+    <div class="shayari">
+      <blockquote> सिंदूर, मंगलसूत्र विवाह का प्रतीक हो सकता है लेकिन प्रेम का नहीं!</blockquote>
+    </div>
+  </div>
+
+
+
+
+
+  <footer>
+    <!-- Left side social icons -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/shayariikajadoo"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Center Copyright -->
+    <p class="footer-copy">Copyright © 2025 Shayari Ka Jadoo - All Rights Reserved.</p>
+
+    <!-- Right side contact/location -->
+    <div class="footer-info">
+      📍Address: Surat - Gujarat, India
+    </div>
+  </footer>
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top">↑</button>
+  <script>
+    // Show the button when scrolled down
+    window.onscroll = function () {
+      let backToTopButton = document.getElementById('back-to-top');
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    // Smooth scroll to top
+    document.getElementById('back-to-top').onclick = function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    // iamge dowload
+    function downloadImage(imgId) {
+      let img = document.getElementById(imgId);
+      let url = img.src;
+      let a = document.createElement("a");
+      a.href = url;
+      a.download = "shayari.jpg"; // download file name
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
+</body>
+
+</html>

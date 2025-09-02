@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Viewport tag for mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'hi', includedLanguages: 'hi,en,gu,ta,te,ml,mr,bn,pa,ur' },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <title>Relationship Shayari</title>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </head>
+  
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Serif Devanagari', Arial, sans-serif;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff512f, #dd2476);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        #google_translate_element {
+            margin-top: 5px;
+        }
+
+
+        h1.page-title {
+            text-align: center;
+            /* Center me rakha */
+            font-size: 28px;
+            /* Thoda chhota */
+            font-weight: 900;
+            color: #fff;
+            background: rgba(255, 81, 47, 0.15);
+            /* Header gradient ke orange shade ka transparent */
+            padding: 10px 20px;
+            border-radius: 15px;
+            display: block;
+            margin: 30px auto;
+            /* Center me margin auto */
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 8px #ff512f, 0 0 16px #dd2476, 0 0 24px #ff512f, 0 0 32px #dd2476;
+            animation: glowPulse 2.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glowPulse {
+            0% {
+                text-shadow: 0 0 5px #ff512f, 0 0 10px #dd2476, 0 0 15px #ff512f, 0 0 20px #dd2476;
+                transform: scale(1);
+            }
+
+            50% {
+                text-shadow: 0 0 10px #ff512f, 0 0 20px #dd2476, 0 0 30px #ff512f, 0 0 40px #dd2476;
+                transform: scale(1.05);
+            }
+
+            100% {
+                text-shadow: 0 0 5px #ff512f, 0 0 10px #dd2476, 0 0 15px #ff512f, 0 0 20px #dd2476;
+                transform: scale(1);
+            }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 480px) {
+            h1.page-title {
+                font-size: 22px;
+                padding: 8px 15px;
+                letter-spacing: 1px;
+            }
+        }
+
+        /* Cards */
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 15px;
+            margin: 15px auto;
+            width: 90%;
+            max-width: 500px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .photo-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .photo-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .photo-buttons button {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .photo-buttons button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .shayari {
+            font-size: 18px;
+            color: #333;
+            margin-top: 12px;
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 15px 20px;
+            background: #111;
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #333;
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: #555;
+            transform: scale(1.2);
+            color: #ff4d4d;
+        }
+
+        .footer-copy {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .footer-info {
+            font-size: 14px;
+            text-align: right;
+        }
+
+        /* Back-to-top */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #008080;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 18px;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        .back-to-top:hover {
+            background-color: #006d63;
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-info {
+                text-align: center;
+            }
+
+            .card {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1.page-title {
+                font-size: 22px;
+            }
+
+            .shayari {
+                font-size: 16px;
+            }
+
+            .photo-buttons button {
+                font-size: 12px;
+                padding: 4px 8px;
+            }
+
+            .logo {
+                width: 40px;
+                height: 40px;
+            }
+
+            header h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-title">
+      <img src="rabbit.png" class="logo" alt="My Rabbitt Logo" loading="lazy">
+      <h1>शायरी का जादू</h1>
+    </div>
+    <div id="google_translate_element"></div>
+  </header>
+
+  <h1 class="page-title">Relationship</h1>
+
+  <!-- Cards -->
+  <div class="card">
+    <div class="photo-container">
+      <img src="gn1.jpg" alt="Relationship Iamge 1" id="img1" loading="lazy">
+      <div class="photo-buttons">
+        <button onclick="downloadImage('img1')">Download</button>
+      </div>
+    </div>
+    <div class="shayari">
+      <p> ना कोई मशवरा दीजिए ना कोई राय दीजिए उदास है दिल<br>
+        एक सिगरेट 🚬 और एक कप चाय ☕ दीजिये..! ❤</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <!-- Left side social icons -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/shayariikajadoo"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Center Copyright -->
+    <p class="footer-copy">Copyright © 2025 Shayari Ka Jadoo - All Rights Reserved.</p>
+
+    <!-- Right side contact/location -->
+    <div class="footer-info">
+      📍Address: Surat - Gujarat, India
+    </div>
+  </footer>
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top">↑</button>
+
+  <script>
+    // Download Function
+    function downloadImage(id) {
+      const img = document.getElementById(id);
+      const link = document.createElement('a');
+      link.href = img.src;
+      link.download = img.src.split('/').pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Back-to-top button
+    const backToTop = document.getElementById('back-to-top');
+    window.onscroll = () => {
+      if (window.scrollY > 300) backToTop.style.display = 'block';
+      else backToTop.style.display = 'none';
+    };
+    backToTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+</body>
+
+</html>
